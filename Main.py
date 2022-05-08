@@ -6,17 +6,25 @@ def greet(bot_name, birth_year):
 def remind_name():
     print('Please, remind me your name.')
     name = input()
-    print('What a great name you have, ' + name + '!')
+    if name == '' or name == ' ':
+        print('What a strange name!')
+        return remind_name()
+    else:
+        print('What a great name you have, ' + name + '!')
 
 
 def guess_age():
     print('Let me guess your age.')
     print('Enter remainders of dividing your age by 3, 5 and 7.')
+    if input() == '' or input() == ' ' or input() == '0' or input() == '0 ':
+        return guess_age()
+    else:
+        rem3 = int(input())
+        rem5 = int(input())
+        rem7 = int(input())
+        age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
 
-    rem3 = int(input())
-    rem5 = int(input())
-    rem7 = int(input())
-    age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+
 
     print("Your age is " + str(age) + "; that's a good time to start programming!")
 
@@ -33,11 +41,14 @@ def count():
 
 def test():
     print("Let's test your programming knowledge.")
+    print("Why do we use methods?")
+    print("1. To repeat a statement multiple times.")
+    print("2. To decompose a program into several small subroutines.")
     res = int(input())
     while res != 2:
         print("Please, try again.")
         res = int(input())
-        
+
     print('Completed, have a nice day!')
 
 
@@ -45,7 +56,7 @@ def end():
     print('Congratulations, have a nice day!')
 
 
-greet('K-218', '2003')  # change it as you need
+greet('K-218', '2020')  # change it as you need
 remind_name()
 guess_age()
 count()
