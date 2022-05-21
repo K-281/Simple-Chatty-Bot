@@ -44,6 +44,31 @@ def test():
         print("Please, try again.")
         res = int(input())
 
+def test_2():
+    print("why do we use classes?")
+    print("1. To group similar objects.")
+    print("2. To give a class a common look and behavior.")
+    print("3. To separate code and data.")
+    res = int(input())
+    while res != 2:
+        print("Please, try again.")
+        res = int(input())
+
+def test_3():
+    print("What is the output of the following code?")
+    print("""
+class Complex:
+    def __init__(self, realpart, imagpart):
+        self.r = realpart
+        self.i = imagpart
+x = Complex(3.0, -4.5)
+print(x.r, x.i)
+""")
+    res = int(input())
+    while res != 3:
+        print("Please, try again.")
+        res = int(input())
+
     print('Completed, have a nice day!')
 
 
