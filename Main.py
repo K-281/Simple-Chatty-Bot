@@ -17,13 +17,10 @@ def remind_name():
 def guess_age():
     print('Let me guess your age.')
     print('Enter remainders of dividing your age by 3, 5 and 7.')
-    if input() == '' or input() == ' ' or input() == '0' or input() == '0 ':
-        return guess_age()
-    else:
-        rem3 = int(input())
-        rem5 = int(input())
-        rem7 = int(input())
-        age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+    rem3 = int(input())
+    rem5 = int(input())
+    rem7 = int(input())
+    age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
 
     print("Your age is " + str(age) + "; that's a good time to start programming!")
 
