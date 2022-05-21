@@ -3,6 +3,7 @@ def greet(bot_name, birth_year):
     print('I was created in ' + birth_year + '.')
 
 
+
 def remind_name():
     print('Please, remind me your name.')
     name = input()
@@ -29,7 +30,6 @@ def guess_age():
 
 def count():
     print('Now I will prove to you that I can count to any number you want.')
-
     num = int(input())
     curr = 0
     while curr <= num:
@@ -50,8 +50,14 @@ def test():
     print('Completed, have a nice day!')
 
 
+
 def end():
-    print('Congratulations, have a nice day!')
+    input('Press y to restart or any other key to exit.')
+    if input() == 'y':
+        return greet('Bot', '2020')
+    else:
+        print('Congratulations, have a nice day!')
+
 
 
 greet('K-218', '2020')  # change it as you need
@@ -60,3 +66,4 @@ guess_age()
 count()
 test()
 end()
+
