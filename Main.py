@@ -71,7 +71,16 @@ print(x.r, x.i)
 
     print('Completed, have a nice day!')
 
-
+def test_4():
+    print("A list can contain __________elements.")
+    print("1. Unlimited(depending on the computer)")
+    print("2. 1000")
+    print("3. million")
+    print("4.10 million")
+    res = int(input())
+    while res != 1:
+        print("Please, try again.")
+        res = int(input())
 
 def end():
     input('Press y to restart or any other key to exit.')
@@ -87,5 +96,8 @@ remind_name()
 guess_age()
 count()
 test()
+test_2()
+test_3()
+test_4()
 end()
 
