@@ -7,7 +7,7 @@ def greet(bot_name, birth_year):
 def remind_name():
     print('Please, remind me your name.')
     name = input()
-    if name == '' or name == ' ':
+    if name in ('', ' '):
         print('What a strange name!')
         return remind_name()
     else:
